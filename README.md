@@ -56,6 +56,7 @@ We evaluate our model on three token level tasks:
 |:----:|:------------------------:|:------------------------:|:------------------------:|:-----------------------:|:--------------------------------:|
 |  FB  | 71.72 ± 0.91   | 73.87 ± 0.50  | 59.50 ± 0.47  | 72.47 ± 0.72  | **76.55** ± **0.14** |
 | CSFD | 82.80 ± 0.14   | 82.51 ± 0.14  | 75.40 ± 0.18  | 79.58 ± 0.46  | **84.79** ± **0.26** |
+
 Average F1 results for the Sentiment Classification task. For more information, see the paper. 
                  
 
@@ -66,6 +67,7 @@ Average F1 results for the Sentiment Classification task. For more information, 
 | STA-CNA      | 83.335 ± 0.063 | 83.593 ± 0.050 |  43.184 ± 0.125   | 82.942 ± 0.106 | **84.345** ± **0.028** |
 | STS-SVOB-img | 79.367 ± 0.486 | 79.900 ± 0.810 |  15.739 ± 2.992   | 79.444 ± 0.338 | **83.744** ± **0.395** |
 | STS-SVOB-hl  | 78.833 ± 0.296 | 76.996 ± 0.305 |  33.949 ± 1.807   | 75.089 ± 0.806 |     **79.827 ± 0.469**     |
+
 Comparison of Pearson correlation achieved using pre-trained CZERT-A, CZERT-B, mBERT, Pavlov and randomly initialised Albert on semantic text similarity. For more information see the paper.
 
 
@@ -104,6 +106,7 @@ SRL results – dep columns are evaluate with labelled F1 from CoNLL 2009 evalua
 |:-----------|:---------------|:---------------|:---------------|:---------------|:---------------|
 | CNEC       | **86.225 ± 0.208** | **86.565 ± 0.198** | 34.635 ± 0.343 | 72.945 ± 0.227 | 81.632 ± 0.165 |
 | BSNLP 2019 | 84.006 ± 1.248 | **86.699 ± 0.370** | 19.773 ± 0.938 | 48.859 ± 0.605 | 80.320 ± 1.090 |
+
 Comparison of f1 score achieved using pre-trained CZERT-A, CZERT-B, mBERT, Pavlov and randomly initialised Albert on named entity recognition task. For more information see the paper.
 
 
