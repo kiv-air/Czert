@@ -31,14 +31,14 @@ We evaluate our model on two sentence level tasks:
 
 
 <!--     tokenizer = BertTokenizerFast.from_pretrained(CZERT_MODEL_PATH, strip_accents=False)  
-	model = TFAlbertForSequenceClassification.from_pretrained(CZERT_MODEL_PATH, num_labels=1)
+  model = TFAlbertForSequenceClassification.from_pretrained(CZERT_MODEL_PATH, num_labels=1)
     
 or
     
     self.tokenizer = BertTokenizerFast.from_pretrained(CZERT_MODEL_PATH, strip_accents=False)
     self.model_encoder = AutoModelForSequenceClassification.from_pretrained(CZERT_MODEL_PATH, from_tf=True)
      -->
-	
+  
 ### Document Level Tasks
 We evaluate our model on one document level task
 * Multi-label Document Classification.
@@ -85,7 +85,7 @@ Comparison of F1 and AUROC score achieved using pre-trained CZERT-A, CZERT-B, mB
 ### Morphological Tagging
 |                        | mBERT          | Pavlov         | Albert-random  | Czert-A        | Czert-B        |
 |:-----------------------|:---------------|:---------------|:---------------|:---------------|:---------------|
-| Universal Dependencies | 99.176 ± 0.006 | 99.211 ± 0.008 | 96.590 ± 0.096 | 98.713 ± 0.008 | **99.273 ± 0.006** |
+| Universal Dependencies | 99.176 ± 0.006 | 99.211 ± 0.008 | 96.590 ± 0.096 | 98.713 ± 0.008 | **99.300 ± 0.009** |
 
 Comparison of F1 score achieved using pre-trained CZERT-A, CZERT-B, mBERT, Pavlov and randomly initialised Albert on morphological tagging task. For more information see [the paper](https://arxiv.org/abs/2103.13031).
 ### Semantic Role Labelling
@@ -105,8 +105,8 @@ SRL results – dep columns are evaluate with labelled F1 from CoNLL 2009 evalua
 ### Named Entity Recognition
 |            | mBERT          | Pavlov         | Albert-random  | Czert-A        | Czert-B        |
 |:-----------|:---------------|:---------------|:---------------|:---------------|:---------------|
-| CNEC       | **86.225 ± 0.208** | **86.565 ± 0.198** | 34.635 ± 0.343 | 72.945 ± 0.227 | 81.632 ± 0.165 |
-| BSNLP 2019 | 84.006 ± 1.248 | **86.699 ± 0.370** | 19.773 ± 0.938 | 48.859 ± 0.605 | 80.320 ± 1.090 |
+| CNEC       | **86.225 ± 0.208** | **86.565 ± 0.198** | 34.635 ± 0.343 | 72.945 ± 0.227 | 86.274 ± 0.116 |
+| BSNLP 2019 | 84.006 ± 1.248 | **86.699 ± 0.370** | 19.773 ± 0.938 | 48.859 ± 0.605 | **86.729 ± 0.344** |
 
 Comparison of f1 score achieved using pre-trained CZERT-A, CZERT-B, mBERT, Pavlov and randomly initialised Albert on named entity recognition task. For more information see [the paper](https://arxiv.org/abs/2103.13031).
 
