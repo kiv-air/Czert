@@ -6,8 +6,16 @@ For more information, see the paper
 
 ## Available Models
 You can download **MLM & NSP only** pretrained models
-[CZERT-A](https://air.kiv.zcu.cz/public/CZERT-A-czert-albert-base-uncased.zip)
-[CZERT-B](https://air.kiv.zcu.cz/public/CZERT-B-czert-bert-base-cased.zip)
+~~[CZERT-A-v1](https://air.kiv.zcu.cz/public/CZERT-A-czert-albert-base-uncased.zip)
+[CZERT-B-v1](https://air.kiv.zcu.cz/public/CZERT-B-czert-bert-base-cased.zip)~~
+
+After some additional experiments, we found out that the tokenizers config was exported wrongly. In Czert-B-v1, the tokenizer parameter "do_lower_case"  was wrongly set to true. In Czert-A-v1 the parameter "strip_accents"  was incorrectly set to true. 
+
+Both mistakes are repaired in v2.
+[CZERT-A-v2](https://air.kiv.zcu.cz/public/CZERT-A-v2-czert-albert-base-uncased.zip)
+[CZERT-B-v2](https://air.kiv.zcu.cz/public/CZERT-B-v2-czert-bert-base-cased.zip)
+
+
 
 or choose from one of **Finetuned Models**
 | | Models  |
@@ -31,14 +39,14 @@ We evaluate our model on two sentence level tasks:
 
 
 <!--     tokenizer = BertTokenizerFast.from_pretrained(CZERT_MODEL_PATH, strip_accents=False)  
-  model = TFAlbertForSequenceClassification.from_pretrained(CZERT_MODEL_PATH, num_labels=1)
+	model = TFAlbertForSequenceClassification.from_pretrained(CZERT_MODEL_PATH, num_labels=1)
     
 or
     
     self.tokenizer = BertTokenizerFast.from_pretrained(CZERT_MODEL_PATH, strip_accents=False)
     self.model_encoder = AutoModelForSequenceClassification.from_pretrained(CZERT_MODEL_PATH, from_tf=True)
      -->
-  
+	
 ### Document Level Tasks
 We evaluate our model on one document level task
 * Multi-label Document Classification.
@@ -94,8 +102,8 @@ Comparison of F1 score achieved using pre-trained CZERT-A, CZERT-B, mBERT, Pavlo
 
 |        |   mBERT    |   Pavlov   | Albert-random |  Czert-A   |  Czert-B   | dep-based | gold-dep |
 |:------:|:----------:|:----------:|:-------------:|:----------:|:----------:|:---------:|:--------:|
-|  span  | 78.547 ± 0.110 | **79.333 ± 0.080** |  51.365 ± 0.423   | 72.254 ± 0.172 | **79.112 ± 0.141** |    \-     |    \-    |
-| syntax | 90.226 ± 0.224 | **90.492 ± 0.040** |  80.747 ± 0.131   | 80.319 ± 0.054 | **90.516 ± 0.047** |   85.19   |  89.52   |
+|  span  | 78.547 ± 0.110 | 79.333 ± 0.080 |  51.365 ± 0.423   | 72.254 ± 0.172 | **81.861 ± 0.102** |    \-     |    \-    |
+| syntax | 90.226 ± 0.224 | 90.492 ± 0.040 |  80.747 ± 0.131   | 80.319 ± 0.054 | **91.462 ± 0.062** |   85.19   |  89.52   |
 
 SRL results – dep columns are evaluate with labelled F1 from CoNLL 2009 evaluation script, other columns are evaluated with span F1 score same as it was used for NER evaluation. For more information see [the paper](https://arxiv.org/abs/2103.13031).
 
