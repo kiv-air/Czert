@@ -119,6 +119,9 @@ SRL results – dep columns are evaluate with labelled F1 from CoNLL 2009 evalua
 Comparison of f1 score achieved using pre-trained CZERT-A, CZERT-B, mBERT, Pavlov and randomly initialised Albert on named entity recognition task. For more information see [the paper](https://arxiv.org/abs/2103.13031).
 
 
+## Licence
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. http://creativecommons.org/licenses/by-nc-sa/4.0/
+
 ## How should I cite CZERT? 
 For now, please cite [the Arxiv paper](https://arxiv.org/abs/2103.13031):
 ```
